@@ -1,49 +1,49 @@
 // Завдання 1
-function print1ToN(n) {
+function displayOneToN(n) {
     if (n < 1) return;
-    print1ToN(n - 1);
+    displayOneToN(n - 1);
     console.log(n);
 }
 
 // Завдання 2
-function printAToB(a, b) {
+function displayRangeAToB(a, b) {
     console.log(a);
     if (a === b) return;
     if (a < b) {
-        printAToB(a + 1, b);
+        displayRangeAToB(a + 1, b);
     } else {
-        printAToB(a - 1, b);
+        displayRangeAToB(a - 1, b);
     }
 }
 
 // Завдання 3
-function isPowerOfTwo(n) {
+function checkPowerOfTwo(n) {
     if (n === 1) return "YES";
     if (n <= 0 || n % 2 !== 0) return "NO";
-    return isPowerOfTwo(Math.floor(n / 2));
+    return checkPowerOfTwo(Math.floor(n / 2));
 }
 
 // Завдання 4
-function sumDigits(n) {
+function calculateDigitSum(n) {
     if (n < 10) return n;
-    return (n % 10) + sumDigits(Math.floor(n / 10));
+    return (n % 10) + calculateDigitSum(Math.floor(n / 10));
 }
 
 // Завдання 5
-function printDigitsReversed(n) {
+function displayDigitsReversed(n) {
     if (n === 0) return;
     console.log(n % 10);
-    printDigitsReversed(Math.floor(n / 10));
+    displayDigitsReversed(Math.floor(n / 10));
 }
 
 // Завдання 6
-function printDigitsDirect(n) {
+function displayDigitsDirect(n) {
     if (n < 10) {
         console.log(n);
         return;
     }
-    printDigitsDirect(Math.floor(n / 10));
+    displayDigitsDirect(Math.floor(n / 10));
     console.log(n % 10);
 }
 
-console.log(isPowerOfTwo(9))
+console.log(checkPowerOfTwo(9));
